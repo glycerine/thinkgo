@@ -23,23 +23,23 @@ https://groups.google.com/forum/#!forum/Golang-nuts
 
 e. How to learn the unique concurrency mechanism of Go: channels. Channels are based on CSP (Communicating Sequential Processes, introduced by Quicksort-inventor and Turing award winner Tony Hoare; http://en.wikipedia.org/wiki/Communicating_sequential_processes ):
 
-  1. http://www.slideshare.net/cloudflare/a-channel-compendium
+  - http://www.slideshare.net/cloudflare/a-channel-compendium
 
 In go, concurrency is treated just using three language elements: go routines, channels, and select statements.
 
-  2. Course by Rob Pike that predates Go 1.0 and is considered out of date, but still has
+  - Course by Rob Pike that predates Go 1.0 and is considered out of date, but still has
 some of the best intro to concurrency (goroutines + channels) idioms:
 
 http://go.googlecode.com/hg-history/release-branch.r60/doc/GoCourseDay1.pdf
 http://go.googlecode.com/hg-history/release-branch.r60/doc/GoCourseDay2.pdf
 http://go.googlecode.com/hg-history/release-branch.r60/doc/GoCourseDay3.pdf
 
-  3. Andrew Gerrand's keynote at GopherCon2014 in Denver back in April:
+  - Andrew Gerrand's keynote at GopherCon2014 in Denver back in April:
 
 http://talks.golang.org/2014/go4gophers.slide
 videos: http://blog.golang.org/gophercon
 
-  4. Read actual code in a real project: https://github.com/glycerine/goq
+  - Read actual code in a real project: https://github.com/glycerine/goq
 
 Here I demonstrate channel techniques, like conditional send, that aren't readily found or discussed elsewhere. The main receive loop/state machine is in goq.go, in the JobServ::Start() method.
 
@@ -49,6 +49,23 @@ Channel General advice
 One channel is best used for one direction of communication. Channels are therefore typically deployed in pairs, one channel for sending a request, and another for replying.
 
 Usally one sends pointers to structs on channels. If sending is considered a transfer of ownership, and there is only ever one owner, then no other synchronization is needed. The owner go-routine is the only one that can read or write from that structure.
+
+The main use of goroutines and channels is to set up communicating state machines. The typical pattern for one such state machine has the go/for/select idiom that looks like this:
+
+~~~
+func Machine() {
+  go func() {
+    for {
+      select { 
+         case <-Channel0:
+         ...
+         case <-Channel1:
+         ...
+      }
+    }
+  }()
+}
+~~~
 
 Tips
 ----
