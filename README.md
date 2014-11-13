@@ -81,7 +81,7 @@ func Machine() {
 Channel Lifecycle
 --------------
 
-To be effective in Go, you need to memorize the channel lifecycle. Write 5 line programs to demonstrate each cell in the grid below.
+To be effective in Go, you need to memorize the channel lifecycle. My suggestion is to write short little five line go programs to demonstrate to yourself each cell in the grid below.
 
 This is important for understanding how
 to use nil channels in a select statement, and why closing a channel is broadcasting a message
