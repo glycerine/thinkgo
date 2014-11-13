@@ -1,9 +1,9 @@
 thinkgo
 =======
 
-Here is my outline for those learning Go for the first time. This will get you up to speed quickly.
+Here is my outline for those learning Go. This will get you up to speed quickly.
 
-The [Go standard library](http://golang.org/pkg/) is a gem, and much more comprehensive than most languages standard libs. In particular [net/http library](http://golang.org/pkg/net/http) is a full-on web serving framework, batteries included.
+The [Go standard library](http://golang.org/pkg/) is a gem, and much, much more comprehensive than other standard libraries. In particular [net/http library](http://golang.org/pkg/net/http) is a full-on web serving framework, batteries included.
 
 a. Upfront hints: When googling or searching stack overflow, search for "golang" instead of "go". The standard alias "golang" has been adopted, even in the official website [golang.org](http://golang.org).
 
@@ -14,7 +14,7 @@ http://tour.golang.org
 b. My favorite tutorial/book:
 Learning Go by Miek Gieben
 
-http://miek.nl/downloads/Go/Learning-Go-latest.pdf [backup](vendor/Learning-Go-latest.pdf)
+http://miek.nl/downloads/Go/Learning-Go-latest.pdf <sub><sup>[backup](vendor/Learning-Go-latest.pdf)</sup></sub>
 
 112 pages. Short and sweet. With exercises.
 
@@ -88,7 +88,7 @@ To kill and get a stack dump of your running/hung program: kill -QUIT <pid>
 
 To generate debugging information (for use in gdb): first use go1.2.1 (not 1.3; they've worsened the debug info), then compile with these flags to turn off inlining and registerization: go build -gcflags "-N -l"
 
-You should use [goimports](https://github.com/bradfitz/goimports) to automatically adjust the imports at the top of your source file. My .emacs setup:
+You should use [goimports](https://github.com/bradfitz/goimports) to automatically adjust the imports at the top of your source file. My `.emacs` setup:
 
 ~~~
 ;;;; goimport to fix imports automagically
@@ -98,4 +98,4 @@ You should use [goimports](https://github.com/bradfitz/goimports) to automatical
 (add-hook 'before-save-hook 'gofmt-before-save)
 ~~~
 
-To install goimports, at the shell do: go get github.com/bradfitz/goimports
+To install goimports, at the shell do: `go get github.com/bradfitz/goimports`
