@@ -80,13 +80,13 @@ func Machine() {
 
 Tips
 ----
-To run all your tests in the *_test.go files: go test -v
+To run all your tests in the *_test.go files: `go test -v`
 
-To check for data races: go test -v -race
+To check for data races: `go test -v -race`
 
-To kill and get a stack dump of your running/hung program: kill -QUIT <pid>
+To kill and get a stack dump of your running/hung program: `kill -QUIT <pid>`
 
-To generate debugging information (for use in gdb): first use go1.2.1 (not 1.3; they've worsened the debug info), then compile with these flags to turn off inlining and registerization: go build -gcflags "-N -l"
+To generate debugging information (for use in gdb): first use go1.2.1 (not 1.3; they've worsened the debug info), then compile with these flags to turn off inlining and registerization: `go build -gcflags "-N -l"`
 
 You should use [goimports](https://github.com/bradfitz/goimports) to automatically adjust the imports at the top of your source file. My `.emacs` setup:
 
