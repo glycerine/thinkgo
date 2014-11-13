@@ -3,6 +3,8 @@ thinkgo
 
 Here is my outline for those learning Go for the first time. This will get you up to speed quickly.
 
+The [Go standard library](http://golang.org/pkg/) is a gem, and much more comprehensive than most languages standard libs. In particular [net/http library](http://golang.org/pkg/net/http) is a full-on web serving framework, batteries included.
+
 a. Upfront hints: When googling or searching stack overflow, search for "golang" instead of "go". The standard alias "golang" has been adopted, even in the official website [golang.org](http://golang.org).
 
 The Go Tour introduces lots of features:
