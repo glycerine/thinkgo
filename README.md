@@ -1,4 +1,61 @@
 thinkgo
 =======
 
-Think Go. Pointers and resources for learning Go. Go (golang) is an elegant, fast, and rapid development language. 
+0. Upfront hints: When googling, search for "golang" instead of "go", "golang" has been adopted to make it easier to search for". The go tour introduces lots of features:
+
+http://tour.golang.org
+
+1. My favorite tutorial/book:
+Learning Go by Miek Gieben
+
+http://miek.nl/downloads/Go/Learning-Go-latest.pdf
+
+112 pages. Short and sweet. With exercises.
+
+2. Signup for updates on the latest things happening in golang land:
+
+http://www.newspaper.io/golang
+
+3. the main user group, worth reading for announcements of new releases. The place to ask and get answers as you are learning.
+
+https://groups.google.com/forum/#!forum/Golang-nuts
+
+
+4. How to learn the unique concurrency mechanism of Go: channels. Channels are based on CSP (Communicating Sequential Processes, introduced by Quicksort-inventor and Turing award winner Tony Hoare; http://en.wikipedia.org/wiki/Communicating_sequential_processes ):
+
+4a. http://www.slideshare.net/cloudflare/a-channel-compendium
+
+In go, concurrency is treated just using three language elements: go routines, channels, and select statements.
+
+4b. Course by Rob Pike that predates Go 1.0 and is considered out of date, but still has
+some of the best intro to concurrency (goroutines + channels) idioms:
+
+http://go.googlecode.com/hg-history/release-branch.r60/doc/GoCourseDay1.pdf
+http://go.googlecode.com/hg-history/release-branch.r60/doc/GoCourseDay2.pdf
+http://go.googlecode.com/hg-history/release-branch.r60/doc/GoCourseDay3.pdf
+
+4c. Andrew Gerrand's keynote at GopherCon2014 in Denver back in April:
+
+http://talks.golang.org/2014/go4gophers.slide
+videos: http://blog.golang.org/gophercon
+
+4d. Read actual code in a real project: https://github.com/glycerine/goq
+
+Here I demonstrate channel techniques, like conditional send, that aren't readily found or discussed elsewhere. The main receive loop/state machine is in goq.go, in the JobServ::Start() method.
+
+Channel General advice
+-----------------
+
+One channel is best used for one direction of communication. Channels are therefore typically deployed in pairs, one channel for sending a request, and another for replying.
+
+Usally one sends pointers to structs on channels. If sending is considered a transfer of ownership, and there is only ever one owner, then no other synchronization is needed. The owner go-routine is the only one that can read or write from that structure.
+
+Tips
+----
+To check for data races: go test -v -race
+
+To kill and get a stack dump of your running/hung program: kill -QUIT <pid>
+
+To generate debugging information (for use in gdb): first use go1.2.1 (not 1.3; they've worsened the debug info), the compile with these flags to turn off inlining and registerization: go build -gcflags "-N -l"
+
+
