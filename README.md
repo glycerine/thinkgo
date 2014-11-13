@@ -43,7 +43,7 @@ videos: http://blog.golang.org/gophercon
 
 Here I demonstrate channel techniques, like conditional send, that aren't readily found or discussed elsewhere. The main receive loop/state machine is in goq.go, in the JobServ::Start() method.
 
-f. My favorite BDD (behavior-driven development)/test framework is called GoConvey. I've also used Ginkgo, but it is a bit over-engineered. GoConvey is smaller, simpler, and elegant. Just like Go itself.
+f. My favorite BDD (behavior-driven development)/test framework is called GoConvey. I've also used Ginkgo, but it is a bit over-engineered. GoConvey is smaller, simpler, and elegant. Just like Go itself. You can see tons of examples of GoConvey in the [Goq project mentioned above.](https://github.com/glycerine/goq)
 
 https://github.com/smartystreets/goconvey
 
