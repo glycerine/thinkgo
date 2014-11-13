@@ -92,7 +92,6 @@ In the channel lifecycle table below, we assume an unbuffered channel. As an imp
 | unbuffered channel | | | |
 |--------|---------|---------|------------|
 | state\action:  | send on | receive on | close |
-|--------|---------|---------|------------|
 | nil    | blocks forever | blocks forever     | panic |  |
 | made (open)   | blocks until receive  | blocks until send | ok |
 | closed | panic  | immediately returns the zero value | panic  |
