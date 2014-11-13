@@ -14,7 +14,7 @@ http://tour.golang.org
 b. My favorite tutorial/book:
 Learning Go by Miek Gieben
 
-http://miek.nl/downloads/Go/Learning-Go-latest.pdf
+http://miek.nl/downloads/Go/Learning-Go-latest.pdf [backup](vendor/Learning-Go-latest.pdf)
 
 112 pages. Short and sweet. With exercises.
 
@@ -29,16 +29,16 @@ https://groups.google.com/forum/#!forum/Golang-nuts
 
 e. How to learn the unique concurrency mechanism of Go: channels. Channels are based on CSP (Communicating Sequential Processes, introduced by Quicksort-inventor and Turing award winner Tony Hoare; http://en.wikipedia.org/wiki/Communicating_sequential_processes ):
 
-  - http://www.slideshare.net/cloudflare/a-channel-compendium
+  - http://www.slideshare.net/cloudflare/a-channel-compendium [backup](vendor/John_Graham-Cumming_A_Channel_Compendium.pdf)
 
 In go, concurrency is treated just using three language elements: go routines, channels, and select statements.
 
   - Course by Rob Pike that predates Go 1.0 and is considered out of date, but still has
 some of the best intro to concurrency (goroutines + channels) idioms:
 
-http://go.googlecode.com/hg-history/release-branch.r60/doc/GoCourseDay1.pdf
-http://go.googlecode.com/hg-history/release-branch.r60/doc/GoCourseDay2.pdf
-http://go.googlecode.com/hg-history/release-branch.r60/doc/GoCourseDay3.pdf
+http://go.googlecode.com/hg-history/release-branch.r60/doc/GoCourseDay1.pdf [backup](vendor/GoCourseDay1.pdf)
+http://go.googlecode.com/hg-history/release-branch.r60/doc/GoCourseDay2.pdf [backup](vendor/GoCourseDay2.pdf)
+http://go.googlecode.com/hg-history/release-branch.r60/doc/GoCourseDay3.pdf [backup](vendor/GoCourseDay3.pdf)
 
   - Andrew Gerrand's keynote at GopherCon2014 in Denver back in April:
 
