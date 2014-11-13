@@ -59,7 +59,9 @@ Channel General advice
 
 One channel is best used for one direction of communication. Channels are therefore typically deployed in pairs, one channel for sending a request, and another for replying.
 
-Usually one sends pointers to structs on channels. If sending is considered a transfer of ownership, and there is only ever one owner, then no other synchronization is needed. The owning go-routine should be the only one that ever reads or write from that structure. Ownership passing semantics is merely a style that Go enables, it isn't enforced by the language. Still it makes it easy to reason about the code, and remains performant. Classical mutex are available, but are likely to create performance bottlenecks and should be avoided until after the channel idioms are mastered.
+Usually one sends pointers to structs on channels. If sending is considered a transfer of ownership, and there is only ever one owner, then no other synchronization is needed. The owning go-routine should be the only one that ever reads or write from that structure. 
+
+The ownership passing motif described above is merely a pattern that Go enables, it isn't enforced by the language. Ownership passing through channels makes it easy to reason about the code, and remains performant. Classical mutex are available, but are likely to create performance bottlenecks and are prone to deadlock; they should be avoided until after the channel idioms are mastered, and even then used rarely.
 
 The main use of goroutines and channels is to set up communicating state machines. The typical pattern for one such state machine has the go/for/select idiom that looks like this:
 
