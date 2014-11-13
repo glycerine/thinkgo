@@ -1,7 +1,7 @@
 thinkgo
 =======
 
-Here is my outline for those learning Go. This will get you up to speed quickly.
+Here is my outline for those learning to think in Go. This will get you up to speed quickly.
 
 The [Go standard library](http://golang.org/pkg/) is a gem, and much, much more comprehensive than other standard libraries. In particular, the [net/http library](http://golang.org/pkg/net/http) is a full-on web serving framework, batteries included.
 
@@ -101,6 +101,8 @@ In the channel lifecycle table below, we assume an unbuffered channel. As an imp
 
 Tips
 ----
+A collection of useful tricks and bits:
+
 To run all your tests in the *_test.go files: `go test -v`
 
 To check for data races: `go test -v -race`
@@ -120,3 +122,8 @@ You should use [goimports](https://github.com/bradfitz/goimports) to automatical
 ~~~
 
 To install goimports, at the shell do: `go get github.com/bradfitz/goimports`
+
+conclusion
+----------
+
+Learn to think in Go. It's a fun language, and massively productive.
