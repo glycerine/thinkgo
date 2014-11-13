@@ -59,7 +59,7 @@ Channel General advice
 
 One channel is best used for one direction of communication. Channels are therefore typically deployed in pairs, one channel for sending a request, and another for replying.
 
-Usally one sends pointers to structs on channels. If sending is considered a transfer of ownership, and there is only ever one owner, then no other synchronization is needed. The owner go-routine is the only one that can read or write from that structure.
+Usually one sends pointers to structs on channels. If sending is considered a transfer of ownership, and there is only ever one owner, then no other synchronization is needed. The owning go-routine should be the only one that ever reads or write from that structure. Ownership passing semantics is merely a style that Go enables, it isn't enforced by the language. Still it makes it easy to reason about the code, and remains performant. Classical mutex are available, but are likely to create performance bottlenecks and should be avoided until after the channel idioms are mastered.
 
 The main use of goroutines and channels is to set up communicating state machines. The typical pattern for one such state machine has the go/for/select idiom that looks like this:
 
@@ -77,6 +77,24 @@ func Machine() {
   }()
 }
 ~~~
+
+Channel Lifecycle
+--------------
+
+To be effective in Go, you need to memorize the channel lifecycle. Write 5 line programs to demonstrate each cell in the grid below.
+
+This is important for understanding how
+to use nil channels in a select statement, and why closing a channel is broadcasting a message
+that can be received at any point in time later. 
+
+In the channel lifecycle table below, we assume an unbuffered channel. As an important exercise, you should construct the analagous chart for a buffered channel.
+
+| state\action:  | send on | receive on | close |
+|--------|---------|---------|------------|
+| nil    | blocks forever | blocks forever     | panic |  |
+| made (open)   | blocks until receive  | blocks until send | ok |
+| closed | panic  | immediately returns the zero value | panic  |
+
 
 Tips
 ----
