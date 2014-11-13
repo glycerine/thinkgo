@@ -88,4 +88,14 @@ To kill and get a stack dump of your running/hung program: kill -QUIT <pid>
 
 To generate debugging information (for use in gdb): first use go1.2.1 (not 1.3; they've worsened the debug info), then compile with these flags to turn off inlining and registerization: go build -gcflags "-N -l"
 
+You should use [goimports](https://github.com/bradfitz/goimports) to automatically adjust the imports at the top of your source file. My .emacs setup:
 
+~~~
+;;;; goimport to fix imports automagically
+(setq gofmt-command "goimports")
+(add-to-list 'load-path "/home/jaten/go1.3.1/go/misc/emacs")
+(require 'go-mode-load)
+(add-hook 'before-save-hook 'gofmt-before-save)
+~~~
+
+To install goimports, at the shell do: go get github.com/bradfitz/goimports
