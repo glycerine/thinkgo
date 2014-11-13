@@ -1,6 +1,8 @@
 thinkgo
 =======
 
+Here is my outline for those learning Go for the first time. This will get you up to speed quickly.
+
 a. Upfront hints: When googling or searching stack overflow, search for "golang" instead of "go". The standard alias "golang" has been adopted, even in the official website [golang.org](http://golang.org).
 
 The Go Tour introduces lots of features:
