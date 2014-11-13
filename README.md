@@ -1,7 +1,9 @@
 thinkgo
 =======
 
-a. Upfront hints: When googling, search for "golang" instead of "go", "golang" has been adopted to make it easier to search for". The go tour introduces lots of features:
+a. Upfront hints: When googling or searching stack overflow, search for "golang" instead of "go". The standard alias "golang" has been adopted, even in the official website [golang.org](http://golang.org).
+
+The Go Tour introduces lots of features:
 
 http://tour.golang.org
 
