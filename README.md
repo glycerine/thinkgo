@@ -90,6 +90,7 @@ that can be received at any point in time later.
 In the channel lifecycle table below, we assume an unbuffered channel. As an important exercise, you should construct the analagous chart for a buffered channel.
 
 | unbuffered channel | | | |
+|--------|---------|---------|------------|
 | state\action:  | send on | receive on | close |
 |--------|---------|---------|------------|
 | nil    | blocks forever | blocks forever     | panic |  |
