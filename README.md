@@ -37,7 +37,9 @@ In go, concurrency is treated just using three language elements: go routines, c
 some of the best intro to Go's concurrency (goroutines + channels) that I've ever seen:
 
 http://go.googlecode.com/hg-history/release-branch.r60/doc/GoCourseDay1.pdf <sup><sub>[backup](vendor/GoCourseDay1.pdf)</sup></sub>
+
 http://go.googlecode.com/hg-history/release-branch.r60/doc/GoCourseDay2.pdf <sup><sub>[backup](vendor/GoCourseDay2.pdf)</sup></sub>
+
 http://go.googlecode.com/hg-history/release-branch.r60/doc/GoCourseDay3.pdf <sup><sub>[backup](vendor/GoCourseDay3.pdf)</sup></sub>
 
   - Andrew Gerrand's keynote at GopherCon2014 in Denver back in April:
