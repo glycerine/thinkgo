@@ -33,8 +33,8 @@ e. How to learn the unique concurrency mechanism of Go: channels. Channels are b
 
 In go, concurrency is treated just using three language elements: go routines, channels, and select statements.
 
-  - Course by Rob Pike that predates Go 1.0 and is considered out of date, but still has
-some of the best intro to concurrency (goroutines + channels) idioms:
+  - Course by Rob Pike that predates Go 1.0 and is slightly dated, but still Day 3 has
+some of the best intro to Go's concurrency (goroutines + channels) that I've ever seen:
 
 http://go.googlecode.com/hg-history/release-branch.r60/doc/GoCourseDay1.pdf <sup><sub>[backup](vendor/GoCourseDay1.pdf)</sup></sub>
 http://go.googlecode.com/hg-history/release-branch.r60/doc/GoCourseDay2.pdf <sup><sub>[backup](vendor/GoCourseDay2.pdf)</sup></sub>
