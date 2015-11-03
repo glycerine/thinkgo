@@ -22,12 +22,22 @@ c. Signup for updates on the latest things happening in golang land:
 
 http://www.newspaper.io/golang
 
-d. the main user group, worth reading for announcements of new releases. The place to ask and get answers as you are learning.
+d. New--as of GopherCon 2015, there is Slack chat room for Go. Signup through the sponsor, Gopher Academy, here: 
+
+https://docs.google.com/forms/d/1Wk7Alq-lp9sgH3h___zMPmh4gAaghsGpnnsW0Pa_9Ik/viewform?fbzx=4754263898376949596#start=invite
+
+Details/description/motivation:
+
+http://blog.gopheracademy.com/gophers-slack-community/   
+
+If you are stuck on a programming problem, asking on Slack is a great way to get unstuck!
+
+e. the main user group, worth reading for announcements of new releases. The place to ask and get answers as you are learning.
 
 https://groups.google.com/forum/#!forum/Golang-nuts
 
 
-e. How to learn the unique concurrency mechanism of Go: channels. Channels are based on CSP (Communicating Sequential Processes, introduced by Quicksort-inventor and Turing award winner Tony Hoare; http://en.wikipedia.org/wiki/Communicating_sequential_processes ):
+f. How to learn the unique concurrency mechanism of Go: channels. Channels are based on CSP (Communicating Sequential Processes, introduced by Quicksort-inventor and Turing award winner Tony Hoare; http://en.wikipedia.org/wiki/Communicating_sequential_processes ):
 
   - http://www.slideshare.net/cloudflare/a-channel-compendium <sup><sub>[backup](vendor/John_Graham-Cumming_A_Channel_Compendium.pdf)</sup></sub>
 
