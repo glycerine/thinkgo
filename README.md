@@ -103,6 +103,8 @@ that can be received at any point in time later.
 
 In the channel lifecycle table below, we assume an unbuffered channel. As an important exercise, you should construct the analagous chart for a buffered channel.
 
+NOTE: This is for channel operations _OUTSIDE_ a select{} statement. Since the select{} statement builds on this logic, you need to memorize this first.
+
 | unbuffered channel | | | |
 |--------|---------|---------|------------|
 | *state\action:*  | *send on* | *receive on* | *close* |
